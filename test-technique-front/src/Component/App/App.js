@@ -1,22 +1,15 @@
 
+import Header from '../Header/Header';
+import Input from '../Input/Input';
+import List from '../List/List';
 import './App.scss';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Header />
+      <Input />
+      <List />
     </div>
   );
 }

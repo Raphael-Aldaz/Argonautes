@@ -1,0 +1,23 @@
+.section__input{
+    text-align: center;
+}
+.input{
+    &__field{
+        border: none;
+        height: 3rem;
+        border-radius: 5px 0px 0px 5px;
+        background-color: rgb(211, 207, 207);
+        width: 50%;
+    }
+    &__button{
+        height: 50px;
+        width: 15%;
+        background-color: rgb(235, 232, 232);
+        border: solid black 0.5px;
+        border-radius: 0px 5px 5px 0px;
+    }
+}
+
+.input__button:hover{
+    cursor: pointer;
+}
