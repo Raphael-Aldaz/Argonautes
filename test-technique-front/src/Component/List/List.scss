@@ -9,12 +9,24 @@
 }
 
 .crew__list{
-    column-count: 3;
-    border: solid black 1px;
-
-    &__item{
-        border: solid red 1px;
-        width: 50%;
-        list-style:lower-greek;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+.crew__list__item{
+    display: flex;
+    justify-content: space-between;
+    border: solid black;
+    padding: 0.5rem;
+}
+.crew__list__item:hover{
+    
+    .delete__crew__member{
+        display: block;
     }
 }
+.delete__crew__member{
+    display: none;
+}
+
+
