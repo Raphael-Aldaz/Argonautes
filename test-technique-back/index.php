@@ -13,11 +13,11 @@ try{
 }
 
 
-$requete = $pdo->prepare("SELECT * FROM `crew`");
+$requete = $pdo->prepare("SELECT * FROM `crew` ORDER BY `crew`.`created_at` DESC");
 $requete->execute();
 $result = $requete->fetchAll();
 
-
+$retour["results"] = count($result);
 
  echo json_encode($result);
 
