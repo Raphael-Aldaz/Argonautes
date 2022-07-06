@@ -1,32 +1,69 @@
+@use'../../vars.scss';
+
 .crew{
-    width: 90%;
-    margin: 2rem auto;
-    border-top: solid black 0.5px;
+    margin-top: vars.$gutter;
 
     &__title{
         text-align: center;
     }
-}
+    &__list{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        padding:vars.$gutter;
+        gap: 20px;
 
-.crew__list{
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-}
-.crew__list__item{
-    display: flex;
-    justify-content: space-between;
-    border: solid black;
-    padding: 0.5rem;
-}
-.crew__list__item:hover{
-    
-    .delete__crew__member{
-        display: block;
+        &__item{
+            border: solid black 1px;
+            list-style: none;
+            display: flex;
+            justify-content: space-between;
+            padding: 0.5rem;
+            
+        }
     }
 }
+
+.crew__face{
+    display: flex;
+    width: 94%;
+    margin: auto;
+}
+.crew__face__item{
+    width: 10%;
+    margin-left: -10px;
+    transition: 1s;
+}
+.crew__face__item:hover{
+    transform: scale(1.2);
+}
 .delete__crew__member{
-    display: none;
+    opacity: 0;
+    cursor: pointer;
+    transition: 1s;
+    background-color: red;
+        color: white;
+        border: none;
 }
 
 
+
+.crew__list__item{
+    transition-duration: 1s; 
+}
+.crew__list__item:hover{
+    transform: scale(1.1); 
+
+    .delete__crew__member{
+        opacity: 1;
+        
+        
+        
+    }
+}
+
+
+@media screen and(max-width:655px) {
+    .crew__face__item{
+        width: 15%;
+    }
+}

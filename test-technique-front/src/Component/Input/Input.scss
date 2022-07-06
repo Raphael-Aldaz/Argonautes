@@ -1,3 +1,5 @@
+@use '../../vars.scss';
+
 .section__input{
     text-align: center;
 }
@@ -8,6 +10,7 @@
         border-radius: 5px 0px 0px 5px;
         background-color: rgb(211, 207, 207);
         width: 50%;
+        padding-left: vars.$gutter;
     }
     &__button{
         height: 50px;
@@ -15,9 +18,10 @@
         background-color: rgb(235, 232, 232);
         border: solid black 0.5px;
         border-radius: 0px 5px 5px 0px;
+        &:hover{
+            cursor: pointer;
+        }
     }
 }
 
-.input__button:hover{
-    cursor: pointer;
-}
+

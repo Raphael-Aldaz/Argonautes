@@ -3,3 +3,11 @@
     margin: 1rem auto;
     border: solid black 1px;
 }
+@media screen and (max-width : 655px) {
+
+    .App{
+        width: 100%;
+        margin: 0;
+    }
+    
+}

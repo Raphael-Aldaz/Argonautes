@@ -1,4 +1,5 @@
 import axios from 'axios';
+import { BigHead } from '@bigheads/core';
 import './List.scss';
 
 const List = ({list}) => {
@@ -10,10 +11,44 @@ const List = ({list}) => {
         .catch((error)=>console.log(error))
         window.location.reload(); 
     }
-
+    
+    let test = list.length;
+    console.log(test,'test')
+    console.log(BigHead)
     return(
         <div className='crew'>
-        <h1 className='crew__title'>Membre d'équipage</h1>
+        <h1 className='crew__title'>Il y a actuellement {test < 1   ? 'aucun membre' : test === 1 ? `${test} membre` :`${test} membres`}  d'équipage capitaine ! </h1> 
+        <div className='crew__face'>
+        {
+            list.map((item) => 
+            <BigHead
+                key={item.id}
+                className='crew__face__item'
+                accessory="none"
+                body="chest"
+                circleColor="blue"
+                clothing="naked"
+                clothingColor="black"
+                eyebrows="serious"
+                eyes="squint"
+                faceMask={false}
+                faceMaskColor="black"
+                facialHair="stubble"
+                graphic="react"
+                hair="bob"
+                hairColor="black"
+                hat="none2"
+                hatColor="green"
+                lashes={false}
+                lipColor="pink"
+                mask
+                mouth="grin"
+                skinTone="yellow"
+            />
+            )
+        }
+
+        </div>
             <ul className='crew__list'>
                 {
                     list.map( (item) => 

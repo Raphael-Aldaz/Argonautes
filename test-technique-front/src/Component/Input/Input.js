@@ -21,7 +21,7 @@ const Input = () => {
     const handleSubmit = (e) => {
         e.preventDefault()
         /* console.log(formData,'formdata') */
-         axios.post('http://localhost:8080/addCrew.php', crewInput,config)
+        axios.post('http://localhost:8080/addCrew.php', crewInput,config)
         .then((response) => {console.log(response)})
         .catch((error)=>{console.log(error,'error post')}) 
         window.location.reload(); 

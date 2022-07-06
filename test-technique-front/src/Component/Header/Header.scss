@@ -1,3 +1,13 @@
+@use '../../vars.scss';
+
 header{
     text-align: center;
+    background-color: vars.$color_blue;
+    padding: vars.$gutter;
+    color: white;
+    text-shadow: 5px;
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    
 }
