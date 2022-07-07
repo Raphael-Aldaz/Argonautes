@@ -13,8 +13,6 @@ function App() {
     .then((result) => setList(result.data) )
     .catch((error)=>{console.log(error,'error axios')})
   }, [])
-
-  console.log(list,'list')
   return (
     <div className="App">
       <Header />

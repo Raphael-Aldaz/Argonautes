@@ -13,8 +13,7 @@ const List = ({list}) => {
     }
     
     let test = list.length;
-    console.log(test,'test')
-    console.log(BigHead)
+    
     return(
         <div className='crew'>
         <h1 className='crew__title'>Il y a actuellement {test < 1   ? 'aucun membre' : test === 1 ? `${test} membre` :`${test} membres`}  d'équipage capitaine ! </h1> 

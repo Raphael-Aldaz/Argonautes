@@ -3,25 +3,29 @@ import axios from 'axios'
 import './Input.scss';
 const Input = () => {
 
-    const formData = new FormData()
+     const formData = new FormData()
 
-    const config = {
+     const config = {
         headers:{
             "Content-type": "multipart/form-data"
         }   
-    } 
+    }  
     const[crewInput, setCrewInput] = useState({})
 
-    formData.append('name_crew', crewInput) 
+    formData.append('name_crew', crewInput)
     
     const handleChange = (e) => {
-        setCrewInput(state=>({...state, [e.target.name]:e.target.value}),)
+        setCrewInput(
+
+            state=>(
+                {...state, [e.target.name]:e.target.value}
+                ),
+                )
     }
 
     const handleSubmit = (e) => {
         e.preventDefault()
-        /* console.log(formData,'formdata') */
-        axios.post('http://localhost:8080/addCrew.php', crewInput,config)
+        axios.post('http://localhost:8080/addCrew.php', crewInput, config)
         .then((response) => {console.log(response)})
         .catch((error)=>{console.log(error,'error post')}) 
         window.location.reload(); 
